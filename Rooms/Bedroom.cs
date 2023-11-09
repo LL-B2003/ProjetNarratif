@@ -4,7 +4,7 @@
     {
         internal override string CreateDescription()
         {
-            if (Game.Couloir)
+            if (Game.couloir)
             {
                 return
                 @"En retournant dans le couloir, vous apercevez le [portail vert] et à votre droite, le [portail bleu]";
@@ -28,20 +28,20 @@ Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes q
                     { Console.WriteLine("Le portail semble fermé"); }
                     else
                     {
-                        Consol.WriteLine("Tu insert la clée et le portail bleu s'ouvre")
-                        Game.Transition<Bathroom>();
+                        Console.WriteLine("Tu insert la clée et le portail bleu s'ouvre");
+                        Game.Transition<PortailbleuRoom>();
                     }
                     break;
                 case "portail vert":
                     Console.WriteLine("Tu entre dans le portail");
-                    Game.Transition<AtticRoom>();
+                    Game.Transition<PortailvertRoom>();
                     break;
-                    case"statue"
-                    if(!PortailbleuRoom.livre)
+                case "statue":
+                    if(!Game.livre)
                     { Console.WriteLine("la statue ouvre les yeux et rie de façon très sinistre¸tout en indiquant qu'il lui manque quelque chose."); }
                     else
                     {
-                        Console.WriteLine("La statue ouvre la bouche et dit de faire attention à l'homme dans la grande salle, se désintègre et un passage s'ouvre!")
+                        Console.WriteLine("La statue ouvre la bouche et dit de faire attention à l'homme dans la grande salle, se désintègre et un passage s'ouvre!");
                         Game.Transition<GrandesalleRoom>();
                         Game.statue = true;
                         Game.couloir = true;

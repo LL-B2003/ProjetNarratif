@@ -1,6 +1,6 @@
 ﻿namespace ProjetNarratif.Rooms
 {
-    internal class Portailbleuroom : Room
+    internal class PortailbleuRoom : Room
     {
         internal override string CreateDescription() =>
 @"En frachissant le portail, tu te retrouve sur une île déserte.
@@ -18,7 +18,7 @@ Le [portail bleu] est derrière toi.
                     Console.WriteLine("En ouvrant le coffre, tu vois un drôle de fruit tout bleu avec des pics de glace.");
                     Console.WriteLine("Un papier dans le coffre dit que si tu le mange, tu vas devenir un homme glace, mais tu perds ta capacité de nager!");
                     Console.WriteLine("Veux tu le manger? [oui] ou [non]");
-                    choix=convert.ToString());
+                    choix=Convert.ToString(Console.ReadLine());
                     if (choix =="oui")
                     {
                         Console.WriteLine("Vous le manger et devenez un homme de glace");
@@ -31,7 +31,7 @@ Le [portail bleu] est derrière toi.
                     break;
                 case "portail bleu":
                     Console.WriteLine("Tu retournes dans le couloir.");
-                    Game.Transition<Bedroom>();
+                    Game.Transition<CouloirRoom>();
                     break;
                 default:
                     Console.WriteLine("Commande invalide.");

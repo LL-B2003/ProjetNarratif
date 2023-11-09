@@ -31,23 +31,26 @@
             {
                 case "portail vert":
                     Console.WriteLine("Tu retournes dans le couloir.");
-                    Game.Transition<Bedroom>();
+                    Game.Transition<CouloirRoom>();
                     break;
                 case "livre":
                     if (!Game.statue)
+                    {
                         Console.WriteLine("Tu t'avances et aperçois un livre.");
-                    Console.WriteLine("Le titre est dans une langue que tu ne connais pas mais la couverture est une statue similaire à celle dans le couloir.");
-                    Console.WriteLine("Tu prends le livre.");
-                    Game.livre = true;
+                        Console.WriteLine("Le titre est dans une langue que tu ne connais pas mais la couverture est une statue similaire à celle dans le couloir.");
+                        Console.WriteLine("Tu prends le livre.");
+                        Game.livre = true;
+                    }
                     else
                     {
-                        Console.WriteLine("Le chevalet est vide")
+                        Console.WriteLine("Le chevalet est vide");
                     }
                     break;
                 case "étagère":
                     if (!Game.statue)
                     {
                         Console.WriteLine("Un champs de force vous donne la nausée, il donne la même impression que la statue dans le couloir")
+                    ;
                     }
                     else
                     {
