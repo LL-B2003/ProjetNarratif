@@ -1,6 +1,6 @@
 ﻿namespace ProjetNarratif.Rooms
 {
-    internal class AtticRoom : Room
+    internal class PortailvertRoom : Room
     {
         internal static bool isKeyCollected;
 
@@ -18,7 +18,7 @@ Tu peux revenir dans ta [chambre].
                     Console.WriteLine("Tu retournes dans ta chambre.");
                     Game.Transition<Bedroom>();
                     break;
-                case "2314":
+                case "1097":
                     Console.WriteLine("Le coffre s'ouvre et tu obiens une clé.");
                     isKeyCollected = true;
                     break;
