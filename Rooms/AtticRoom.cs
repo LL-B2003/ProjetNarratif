@@ -16,7 +16,7 @@
             else
             {
                 return
-                @"Passer le portail vert, tu remarque que l'ambiance à complètement changer. 
+                @"Passer le [portail vert], tu remarque que l'ambiance à complètement changer. 
                 Tu es dans une bibliothèque qui semble oublié, la nature ayant repris sa place.
                 Tu aperçois un [livre] sur un chevalet. 
                 Il y a aussi quelque chose de bleuté qui émane sur une [étagère].

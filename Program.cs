@@ -7,7 +7,7 @@ game.Add(new PortailvertRoom());
 game.Add(new PortailbleuRoom());
 game.Add(new GrandesalleRoom());
 game.Add(new Individu());
-
+game.Add(new cuisine());
 while (!game.IsGameOver())
 {
     Console.WriteLine("--");

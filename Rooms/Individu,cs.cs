@@ -21,7 +21,7 @@ namespace ProjetNarratif.Rooms
                
                 case "écouter":
                     Console.WriteLine("Il te demande d'aller lui faire une pizza et que la cuisine est à gauche. Il veut une pizza avec une pâte naturelle, 20 pepperonis, 15 olives, du fromage mozarella et de la sauce tomate");
-                    Game.Transition<>();
+                    
                     break;
                 case "ignorer":
                     if(!Game.logiadeglace)
@@ -37,12 +37,12 @@ namespace ProjetNarratif.Rooms
                         if(choix==1)
                         {
                             Console.WriteLine("Tu ignore sa demande de pardon et tu le gèle au complet avant de fracasser son corps. Il n'aurait pas du t'attaquer. Tu remarque une porte en métal au bout de la pièce.");
-                            Game.Transition<>();
+                            
                         }
                         else
                         {
                             Console.WriteLine("Tu l'épargne. Il te remercie et pour l'avoir épargner, il te dit qu'il ne demandera pas de service et appuie sur un bouton sur la table qui annule une piège dans la salle derrière la grande porte de métal. En fait il veux juste que tu parte le plus vite possible de sa pièce.");
-                            Game.Transition<>();
+                            
                         }
                     }
                     break;

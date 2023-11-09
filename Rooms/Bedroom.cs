@@ -7,7 +7,7 @@
             if (Game.couloir)
             {
                 return
-                @"En retournant dans le couloir, vous apercevez le [portail vert] et à votre droite, le [portail bleu]";
+                @"En retournant dans le couloir, vous apercevez le [portail vert] et à votre droite, le [portail bleu]. Le [couloir] est derrière";
             }
             else
             {
@@ -46,6 +46,10 @@ Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes q
                         Game.statue = true;
                         Game.couloir = true;
                     }
+                    break;
+                case "couloir":
+                    Console.WriteLine("Retour dans la grande salle");
+                    Game.Transition<GrandesalleRoom>();
                     break;
                 default:
                     Console.WriteLine("Commande invalide.");
