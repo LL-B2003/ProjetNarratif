@@ -2,7 +2,7 @@
 using ProjetNarratif.Rooms;
 
 var game = new Game();
-game.Add(new LongcouloirRoom());
+game.Add(new CouloirRoom());
 game.Add(new PortailvertRoom());
 game.Add(new PortailbleuRoom());
 game.Add(new GrandesalleRoom));
@@ -14,6 +14,8 @@ while (!game.IsGameOver())
     string? choice = Console.ReadLine()?.ToLower() ?? "";
     Console.Clear();
     game.ReceiveChoice(choice);
+
+    
 }
 
 Console.WriteLine("FIN");

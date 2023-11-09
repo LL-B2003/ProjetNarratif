@@ -1,9 +1,9 @@
 ﻿namespace ProjetNarratif.Rooms
 {
-    internal class LongCouloirRoom : Room
+    internal class CouloirRoom : Room
     {
         internal override string CreateDescription() =>
-@"Tu es un pirate qui c'est perdu en mer, et tu viens de te réveiller dans un long couloir sombre et obscur.
+@"Tu es un cuisinier qui c'est perdu en mer, et tu viens de te réveiller dans un long couloir sombre et obscur.
 Tu regarde autour de toi et tu aperçois à ta gauche un [portail vert]. À ta droite un [portail bleu].
 Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes qui semblent attendrent quelque chose.
 
@@ -11,11 +11,11 @@ Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes q
 
         internal override void  ReceiveChoice(string choice)
         {
-            
+            static internal bool statue;
             switch (choice)
             {
                 case "portail bleu":
-                    if (!Game.clédeglace)
+                    if (!PortailvertRoom.clédeglace)
                     { Console.WriteLine("Le portail semble fermé"); }
                     else
                     {
@@ -28,12 +28,13 @@ Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes q
                     Game.Transition<AtticRoom>();
                     break;
                     case"statue"
-                    if(!Game.livre)
+                    if(!PortailbleuRoom.livre)
                     { Console.WriteLine("la statue ouvre les yeux et rie de façon très sinistre¸tout en indiquant qu'il lui manque quelque chose."); }
                     else
                     {
                         Console.WriteLine("La statue ouvre la bouche et dit de faire attention à l'homme dans la grande salle, se désintègre et un passage s'ouvre!")
                         Game.Transition<GrandesalleRoom>();
+                        statue = true;
                     }
                     break;
                 default:

@@ -5,11 +5,13 @@
         internal override string CreateDescription() =>
 @"En frachissant le portail, tu te retrouve sur une île déserte.
 La seule chose que tu vois est un [coffre].
+Le [portail bleu] est derrière toi.
 ";
 
         internal override void ReceiveChoice(string choice)
         {
             string choix;
+            static internal bool logiadeglace;
             switch (choice)
             {
                 case "coffre":
@@ -20,7 +22,7 @@ La seule chose que tu vois est un [coffre].
                     if (choix =="oui")
                     {
                         Console.WriteLine("Vous le manger et devenez un homme de glace");
-                        Game.logiadeglace = true;
+                        logiadeglace = true;
                     }
                     if (choix == "non")
                     {

@@ -11,6 +11,7 @@ namespace ProjetNarratif
         static internal bool clédeglace;
         static internal bool livre;
         static internal bool logiadeglace;
+        static internal int vie = 3;
         static string nextRoom = "";
 
         internal void Add(Room room)
@@ -19,6 +20,14 @@ namespace ProjetNarratif
             if (currentRoom == null)
             {
                 currentRoom = room;
+            }
+        }
+        internal static void Pertedevie()
+        {
+            vie--;
+            if (vie ) 
+            { 
+                Console.WriteLine()
             }
         }
 
