@@ -6,7 +6,7 @@
 
         internal override string CreateDescription()
         {
-            if (CouloirRoom.statue)
+            if (Game.statue)
             {
                 return
                 @"En retournant dans la bibliothèque, vous appercevez le chevalet où le [livre] était placé.
@@ -26,8 +26,7 @@
 
         internal override void ReceiveChoice(string choice)
         {
-            static internal bool clédeglace;
-            static internal bool livre;
+            
             switch (choice)
             {
                 case "portail vert":
@@ -35,18 +34,18 @@
                     Game.Transition<Bedroom>();
                     break;
                 case "livre":
-                    if (!CouloirRoom.statue)
+                    if (!Game.statue)
                         Console.WriteLine("Tu t'avances et aperçois un livre.");
                     Console.WriteLine("Le titre est dans une langue que tu ne connais pas mais la couverture est une statue similaire à celle dans le couloir.");
                     Console.WriteLine("Tu prends le livre.");
-                    livre = true;
+                    Game.livre = true;
                     else
                     {
                         Console.WriteLine("Le chevalet est vide")
                     }
                     break;
                 case "étagère":
-                    if (!CouloirRoom.statue)
+                    if (!Game.statue)
                     {
                         Console.WriteLine("Un champs de force vous donne la nausée, il donne la même impression que la statue dans le couloir")
                     }
@@ -54,7 +53,7 @@
                     {
                         Console.WriteLine("Tu regarde l'étagère un coffret. Tu ouvres celui-ci et tu y trouvent une clé de glace");
                         Console.WriteLine("Il y aussi un livre sur les voyagent interdimentionnels et un tome de one piece");
-                        clédeglace = true;
+                        Game.clédeglace = true;
                     }
                     break;
                 default:

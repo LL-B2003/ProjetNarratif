@@ -2,20 +2,29 @@
 {
     internal class CouloirRoom : Room
     {
-        internal override string CreateDescription() =>
-@"Tu es un cuisinier qui c'est perdu en mer, et tu viens de te réveiller dans un long couloir sombre et obscur.
+        internal override string CreateDescription()
+        {
+            if (Game.Couloir)
+            {
+                return
+                @"En retournant dans le couloir, vous apercevez le [portail vert] et à votre droite, le [portail bleu]";
+            }
+            else
+            {
+                return
+                @"Tu es un cuisinier qui c'est perdu en mer, et tu viens de te réveiller dans un long couloir sombre et obscur.
 Tu regarde autour de toi et tu aperçois à ta gauche un [portail vert]. À ta droite un [portail bleu].
-Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes qui semblent attendrent quelque chose.
-
-";
+Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes qui semblent attendrent quelque chose.";
+            }
+        }
 
         internal override void  ReceiveChoice(string choice)
         {
-            static internal bool statue;
+            
             switch (choice)
             {
                 case "portail bleu":
-                    if (!PortailvertRoom.clédeglace)
+                    if (!Game.clédeglace)
                     { Console.WriteLine("Le portail semble fermé"); }
                     else
                     {
@@ -34,7 +43,8 @@ Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes q
                     {
                         Console.WriteLine("La statue ouvre la bouche et dit de faire attention à l'homme dans la grande salle, se désintègre et un passage s'ouvre!")
                         Game.Transition<GrandesalleRoom>();
-                        statue = true;
+                        Game.statue = true;
+                        Game.couloir = true;
                     }
                     break;
                 default:

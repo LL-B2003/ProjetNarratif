@@ -8,6 +8,8 @@ namespace ProjetNarratif
         Room currentRoom;
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
+        static internal bool statue;
+        static internal bool couloir;
         static internal bool clédeglace;
         static internal bool livre;
         static internal bool logiadeglace;

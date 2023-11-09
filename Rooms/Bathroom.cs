@@ -11,7 +11,7 @@ Le [portail bleu] est derrière toi.
         internal override void ReceiveChoice(string choice)
         {
             string choix;
-            static internal bool logiadeglace;
+            
             switch (choice)
             {
                 case "coffre":
@@ -22,7 +22,7 @@ Le [portail bleu] est derrière toi.
                     if (choix =="oui")
                     {
                         Console.WriteLine("Vous le manger et devenez un homme de glace");
-                        logiadeglace = true;
+                        Game.logiadeglace = true;
                     }
                     if (choix == "non")
                     {
