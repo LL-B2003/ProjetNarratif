@@ -1,29 +1,34 @@
 ﻿namespace ProjetNarratif.Rooms
 {
-    internal class Bathroom : Room
+    internal class Portailbleuroom : Room
     {
         internal override string CreateDescription() =>
-@"Dans la toilette, le [bain] est rempli d'eau chaude.
-Le [miroir] devant toi affiche ton visage déprimé.
-Tu peux revenir dans ta [chambre].
+@"En frachissant le portail, tu te retrouve sur une île déserte.
+La seule chose que tu vois est un [coffre].
 ";
 
         internal override void ReceiveChoice(string choice)
         {
-            bool vapeur;
+            string choix;
             switch (choice)
             {
-                case "bain":
-                    Console.WriteLine("Tu te laisses relaxer dans le bain. Une vapeur étrange émane de ton corps.");
-                    vapeur=true
+                case "coffre":
+                    Console.WriteLine("En ouvrant le coffre, tu vois un drôle de fruit tout bleu avec des pics de glace.");
+                    Console.WriteLine("Un papier dans le coffre dit que si tu le mange, tu vas devenir un homme glace, mais tu perds ta capacité de nager!");
+                    Console.WriteLine("Veux tu le manger? [oui] ou [non]");
+                    choix=convert.ToString());
+                    if (choix =="oui")
+                    {
+                        Console.WriteLine("Vous le manger et devenez un homme de glace");
+                        Game.logiadeglace = true;
+                    }
+                    if (choix == "non")
+                    {
+                        Console.WriteLine("Vous fermez le coffre");
+                    }
                     break;
-                case "miroir":
-                    if ("vapeur")
-                    { Console.WriteLine("Tu aperçois les chiffres 1097 écrits sur la brume sur le miroir."); }
-                    else {Console.WriteLine("Tu vois ton visage") }
-                    break;
-                case "chambre":
-                    Console.WriteLine("Tu retournes dans ta chambre.");
+                case "portail bleu":
+                    Console.WriteLine("Tu retournes dans le couloir.");
                     Game.Transition<Bedroom>();
                     break;
                 default:

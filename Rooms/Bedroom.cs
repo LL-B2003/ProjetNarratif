@@ -15,11 +15,11 @@ Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes q
             switch (choice)
             {
                 case "portail bleu":
-                    if (!game.clédeglace)
+                    if (!Game.clédeglace)
                     { Console.WriteLine("Le portail semble fermé"); }
                     else
                     {
-                        Consol.WriteLine("Le portail bleu s'ouvre")
+                        Consol.WriteLine("Tu insert la clée et le portail bleu s'ouvre")
                         Game.Transition<Bathroom>();
                     }
                     break;
@@ -28,11 +28,12 @@ Finalement, au bout du couloir se trouve une [statue] avec deux mains ouvertes q
                     Game.Transition<AtticRoom>();
                     break;
                     case"statue"
-                    if(!game.livre)
+                    if(!Game.livre)
                     { Console.WriteLine("la statue ouvre les yeux et rie de façon très sinistre¸tout en indiquant qu'il lui manque quelque chose."); }
                     else
                     {
-                        Console.WriteLine()
+                        Console.WriteLine("La statue ouvre la bouche et dit de faire attention à l'homme dans la grande salle, se désintègre et un passage s'ouvre!")
+                        Game.Transition<GrandesalleRoom>();
                     }
                     break;
                 default:
