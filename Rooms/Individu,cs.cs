@@ -15,7 +15,7 @@ namespace ProjetNarratif.Rooms
 
         internal override void ReceiveChoice(string choice)
         {
-            int choix=0;
+            string choix2;
             switch (choice)
             {
                
@@ -32,9 +32,9 @@ namespace ProjetNarratif.Rooms
                     else 
                     {
                         Console.WriteLine("L'individu se lève et tu te rends compte qu'il fait deux fois ta taille. Mais lorsqu'il tente de te prendre, ses mains passe à travers ton corps et elles gèlent. Tu veux te venger mais l'individu tente de s'excuser.");
-                        Console.WriteLine("Veux tu le faire payer? oui [Tapez 1], non [Tapez 2]");
-                        choix=Convert.ToInt32(Console.ReadLine());
-                        if(choix==1)
+                        Console.WriteLine("Veux tu le faire payer? [oui], [non]");
+                        choix2=Convert.ToString(Console.ReadLine());
+                        if(choix2=="oui")
                         {
                             Console.WriteLine("Tu ignore sa demande de pardon et tu le gèle au complet avant de fracasser son corps. Il n'aurait pas du t'attaquer. Tu remarque une porte en métal au bout de la pièce.");
                             
