@@ -16,8 +16,11 @@
                 case "armoire":
                     Console.WriteLine();
                     break;
-                case "":
+                case "frigo":
                     break;
+                case "bocal à pizza":
+                    break;
+                    
                 default:
                     Console.WriteLine("Commande invalide.");
                     break;
