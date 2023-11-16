@@ -14,6 +14,7 @@ namespace ProjetNarratif
         static internal bool livre;
         static internal bool geler;
         static internal bool logiadeglace;
+        static internal bool pirate;
         
         static string nextRoom = "";
 

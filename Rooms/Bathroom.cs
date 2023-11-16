@@ -35,16 +35,18 @@ Le [portail bleu] est derrière toi.
                     break;
                 case "barque":
                     Console.WriteLine("Vous embarquez sur la barque barque et vous vous dirigez vers l'horizon");
+                    Game.Transition<mersud>();
                     break;
                 case "Vélo":
                     Console.WriteLine("Vélo");
                     if (Game.logiadeglace)
                     {
                         Console.WriteLine("Vous embarquez sur le vélo, une vague viens sur vous. Mais la vague se gèle et vous partez sur la mer en vélo avec votre chemin de glace.");
+                        Game.Transition<mernord>();
                     }
                     else
                     {
-                        Console.WriteLine("Vous embarquez sur ke vélo, vous tentez d'aller sur la mer mais vous coulez et vous vous noyez");
+                        Console.WriteLine("Vous embarquez sur le vélo, vous tentez d'aller sur la mer mais vous coulez et vous vous noyez");
                         Game.Finish();
                     }
                         break;
