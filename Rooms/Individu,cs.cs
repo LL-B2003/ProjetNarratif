@@ -36,7 +36,7 @@ namespace ProjetNarratif.Rooms
                         choix2=Convert.ToString(Console.ReadLine());
                         if(choix2=="oui")
                         {
-                            Console.WriteLine("Tu ignore sa demande de pardon et tu le gèle au complet avant de fracasser son corps. Il n'aurait pas du t'attaquer. Tu remarque une porte en métal au bout de la pièce.");
+                            Console.WriteLine("Tu ignore sa demande de pardon et tu le gèle. Il n'aurait pas du t'attaquer. Tu remarque une porte en métal au bout de la pièce.");
                             
                         }
                         else

@@ -3,7 +3,7 @@
     internal class PortailbleuRoom : Room
     {
         internal override string CreateDescription() =>
-@"En frachissant le portail, tu te retrouve sur une île déserte.
+@"En frachissant le portail, tu te retrouve sur une île déserte avec une [barque] au sud de l'île et un [vélo] au nord de l'île.
 La seule chose que tu vois est un [coffre].
 Le [portail bleu] est derrière toi.
 ";
@@ -33,6 +33,20 @@ Le [portail bleu] est derrière toi.
                     Console.WriteLine("Tu retournes dans le couloir.");
                     Game.Transition<CouloirRoom>();
                     break;
+                case "barque":
+                    Console.WriteLine("Vous embarquez sur la barque barque et vous vous dirigez vers l'horizon");
+                    break;
+                case "Vélo":
+                    Console.WriteLine("Vélo");
+                    if (Game.logiadeglace)
+                    {
+                        Console.WriteLine("Vous embarquez sur le vélo, une vague viens sur vous. Mais la vague se gèle et vous partez sur la mer en vélo avec votre chemin de glace.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cous embarquez sur ke vélo, vous tentez d'aller sur la mer mais vous coulez et vous vous noyez");
+                    }
+                        break;
                 default:
                     Console.WriteLine("Commande invalide.");
                     break;
