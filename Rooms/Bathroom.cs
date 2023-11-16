@@ -44,7 +44,8 @@ Le [portail bleu] est derrière toi.
                     }
                     else
                     {
-                        Console.WriteLine("Cous embarquez sur ke vélo, vous tentez d'aller sur la mer mais vous coulez et vous vous noyez");
+                        Console.WriteLine("Vous embarquez sur ke vélo, vous tentez d'aller sur la mer mais vous coulez et vous vous noyez");
+                        Game.Finish();
                     }
                         break;
                 default:
