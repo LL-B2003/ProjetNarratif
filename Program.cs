@@ -8,7 +8,7 @@ game.Add(new PortailvertRoom());
 game.Add(new PortailbleuRoom());
 game.Add(new GrandesalleRoom());
 game.Add(new Individu());
-game.Add(new cuisine());
+game.Add(new Grandebiblio());
 game.Add(new mersud());
 game.Add(new mernord());
 while (!game.IsGameOver())

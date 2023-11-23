@@ -20,7 +20,7 @@ namespace ProjetNarratif.Rooms
             {
                
                 case "écouter":
-                    Console.WriteLine("Il te demande d'aller chercher un parchemin dans ");
+                    Console.WriteLine("Il te demande d'aller chercher une carte cacher dans la grande biblothèque");
                     
                     break;
                 case "ignorer":

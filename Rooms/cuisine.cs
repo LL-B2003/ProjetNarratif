@@ -1,6 +1,6 @@
 ﻿namespace ProjetNarratif.Rooms
 {
-    internal class cuisine : Room
+    internal class Grandebiblio : Room
     {
         internal override string CreateDescription() =>
             @"";
