@@ -20,7 +20,7 @@ namespace ProjetNarratif.Rooms
             {
                
                 case "écouter":
-                    Console.WriteLine("Il te demande d'aller lui faire une pizza et que la cuisine est à gauche. Il veut une pizza avec une pâte naturelle, 20 pepperonis, 15 olives, du fromage mozarella et de la sauce tomate");
+                    Console.WriteLine("Il te demande d'aller chercher un parchemin dans ");
                     
                     break;
                 case "ignorer":
