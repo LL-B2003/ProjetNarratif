@@ -8,7 +8,7 @@ namespace ProjetNarratif.Rooms
 
 
 
-               @"";
+               @"Tu ";
 
         internal override void ReceiveChoice(string choice)
         {
