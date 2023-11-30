@@ -20,7 +20,7 @@ namespace ProjetNarratif.Rooms
             {
                
                 case "écouter":
-                    Console.WriteLine("Il te demande d'aller chercher un parchemin avec un sort réversion cacher dans la grande biblothèque");
+                    Console.WriteLine("Il te demande d'aller chercher un parchemin avec un sort de réversion cacher dans la grande bibliothèque. Il te dit de bien faire ton choix car tune peux prendre qu'un seul parchemin");
                     Game.Transition<Grandebiblio>();
                     break;
                 case "ignorer":
@@ -39,9 +39,10 @@ namespace ProjetNarratif.Rooms
                             Console.WriteLine("Tu ignore sa demande de pardon et tu le gèle. Il n'aurait pas du t'attaquer. Tu remarque une porte en métal au bout de la pièce.");
                             
                         }
-                        else
+                        if(choix2=="non")
                         {
-                            Console.WriteLine("Tu l'épargne. Il te remercie et pour l'avoir épargner, il te dit qu'il ne demandera pas de service et appuie sur un bouton sur la table qui annule une piège dans la salle derrière la grande porte de métal. En fait il veux juste que tu parte le plus vite possible de sa pièce.");
+                            Console.WriteLine("Tu l'épargne. Il te remercie et pour l'avoir épargner, il te dit qu'il ne demandera pas de service et appuie sur un bouton sur la table qui annule une piège dans la salle derrière la grande porte de métal. En fait il veux juste que tu parte le plus vite possible de chez lui.");
+                            Game.Finish();
                             
                         }
                     }
