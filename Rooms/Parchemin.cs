@@ -8,7 +8,7 @@ namespace ProjetNarratif.Rooms
 
 
 
-               @"Tu ";
+               @"Cette pièce n'est pas fini";
 
         internal override void ReceiveChoice(string choice)
         {
