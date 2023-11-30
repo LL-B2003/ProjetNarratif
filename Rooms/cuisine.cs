@@ -23,7 +23,8 @@
                     {
                         Console.WriteLine("Tu prends le parchemin et retourne vers l'individu");
                         Game.parcheminfutur = true;
-                        Game.individu = true;
+                        Game.Transition<Parchemin>();
+                        
                     }
                     if(choix3=="non")
                     {
@@ -38,7 +39,8 @@
                     {
                         Console.WriteLine("Tu prends le parchemin et tu retournes vers l'individu");
                         Game.parcheminblanc = true;
-                        Game.individu = true;
+                        Game.Transition<Parchemin>();
+                        
                     }
                     if (choix3=="non")
                     {
@@ -53,7 +55,7 @@
                     {
                         Console.WriteLine("Tu prends le parchemin et retourne vers l'individu");
                         Game.parcheminmaléfique = true;
-                        Game.individu = true;
+                        Game.Transition<Parchemin>();
                     }
                     if (choix3=="non")
                     {

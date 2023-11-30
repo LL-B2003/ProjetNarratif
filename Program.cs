@@ -9,6 +9,7 @@ game.Add(new PortailbleuRoom());
 game.Add(new GrandesalleRoom());
 game.Add(new Individu());
 game.Add(new Grandebiblio());
+game.Add(new ));
 game.Add(new mersud());
 game.Add(new mernord());
 while (!game.IsGameOver())

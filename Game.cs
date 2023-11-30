@@ -18,7 +18,7 @@ namespace ProjetNarratif
         static internal bool parcheminfutur;
         static internal bool parcheminmaléfique;
         static internal bool parcheminblanc;
-        static internal bool individu;
+        
         static internal bool retour;
         
         static string nextRoom = "";
