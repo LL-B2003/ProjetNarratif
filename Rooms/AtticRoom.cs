@@ -55,7 +55,7 @@
                     else
                     {
                         Console.WriteLine("Tu regarde l'étagère un coffret. Tu ouvres celui-ci et tu y trouvent une clé de glace");
-                        Console.WriteLine("Il y aussi un livre sur les voyagent interdimentionnels et un tome de one piece");
+                        Console.WriteLine("Il y aussi un livre sur les voyagent interdimentionnels écrit par Jaime Scientis et un tome de one piece");
                         Game.clédeglace = true;
                     }
                     break;

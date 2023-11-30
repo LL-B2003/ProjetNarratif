@@ -9,7 +9,8 @@ namespace ProjetNarratif.Rooms
 
             @"En ramant vers le sud, vous voyez un gros [Tourbillon]
             Plus loin, vous apercevez une [île] avec beaucoup de végétation<
-            Vous ppouvez aussi [continuez]";
+            Vous pouvez aussi [continuez]
+            Sinon vous revener sur l'[ile]";
 
 
         internal override void ReceiveChoice(string choice)
@@ -25,6 +26,10 @@ namespace ProjetNarratif.Rooms
                     break;
                 case "continuez":
                     Console.WriteLine("Vous continuez vers l'horizon");
+                    break;
+                case "ile":
+                    Game.retour = true;
+                    Game.Transition<PortailbleuRoom>();
                     break;
                 default:
                     Console.WriteLine("Commande invalide.");

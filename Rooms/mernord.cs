@@ -11,7 +11,7 @@ namespace ProjetNarratif.Rooms
             {
                 return
             @"Sur votre vélo, vous pédalez pendant une bonne heure avant d'arriver devant un petit [îlot]
-             À votre gauche, il y a un [bateau] et une grande [ville] se trouve devant vous";
+             À votre gauche, il y a un [bateau] et une grande [ville] se trouve devant vous, sinon, vous pouvez retourner ver l'[ile]";
             }
             else
             {
@@ -50,6 +50,10 @@ namespace ProjetNarratif.Rooms
                 case "ville":
                     Console.WriteLine("Vous vous diriger vers l'île gigantesque qui semble être un pays.");
                     break;
+                case "ile":
+                    Game.retour=true;
+                    Game.Transition<PortailbleuRoom>();
+                    break; 
                 default:
                     Console.WriteLine("Commande invalide.");
                     break;

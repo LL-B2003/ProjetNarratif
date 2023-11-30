@@ -20,8 +20,8 @@ namespace ProjetNarratif.Rooms
             {
                
                 case "écouter":
-                    Console.WriteLine("Il te demande d'aller chercher une carte cacher dans la grande biblothèque");
-                    
+                    Console.WriteLine("Il te demande d'aller chercher un parchemin avec un sort réversion cacher dans la grande biblothèque");
+                    Game.Transition<Grandebiblio>();
                     break;
                 case "ignorer":
                     if(!Game.logiadeglace)
