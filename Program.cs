@@ -12,6 +12,7 @@ game.Add(new Grandebiblio());
 game.Add(new Parchemin());
 game.Add(new mersud());
 game.Add(new mernord());
+game.Add(new enigme());
 while (!game.IsGameOver())
 {
     Console.WriteLine("--");

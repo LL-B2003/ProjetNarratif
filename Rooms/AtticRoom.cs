@@ -11,7 +11,8 @@
                 return
                 @"En retournant dans la bibliothèque, vous appercevez le chevalet où le [livre] était placé.
                 Vous voyez aussi encore l'[étagère] qui brille.
-                La [portail vert] est derrière vous";
+                La [portail vert] est derrière vous.
+                Plus loin, il y a une [porte].";
             }
             else
             {
@@ -58,6 +59,9 @@
                         Console.WriteLine("Il y aussi un livre sur les voyagent interdimentionnels écrit par Jaime Scientis et un tome de one piece");
                         Game.clédeglace = true;
                     }
+                    break;
+                case "pièce":
+                    Game.Transition<enigme>();
                     break;
                 default:
                     Console.WriteLine("Commande invalide.");
